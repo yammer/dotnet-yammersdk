@@ -1,0 +1,51 @@
+﻿<UserControl
+	x:Class="Yammer.Activities.Controls.UserLoginControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+	x:Name="ThisUserLoginControl"
+    d:DesignHeight="480" d:DesignWidth="480">
+	<UserControl.Resources>
+		<Style x:Key="TextBlockLoginPageStyle" TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+			<Setter Property="FontSize" Value="{StaticResource PhoneFontSizeNormal}"/>
+			<Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}"/>
+			<Setter Property="Margin" Value="{StaticResource PhoneHorizontalMargin}"/>
+		</Style>
+		<Style x:Key="WatermarkTextStyle" BasedOn="{StaticResource TextBlockLoginPageStyle}" TargetType="TextBlock">
+			<!--<Setter Property="FontSize" Value="{StaticResource PhoneTextSmallStyle}"/>-->
+			<Setter Property="Foreground" Value="DarkGray"/>
+			<Setter Property="Margin" Value="20,0,12,0"></Setter>
+		</Style>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="{StaticResource TransparentBrush}">
+		<StackPanel Margin="4,11,0,0" VerticalAlignment="Top">
+			<TextBlock x:Name="UsernameLabel" Margin="10,0,0,0" Style="{StaticResource TextBlockLoginPageStyle}">Email</TextBlock>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<TextBox x:Name="UserEmailTextBox"
+					 Grid.Row="0"
+					 Foreground="#FF646464"
+					 FontFamily="Portable User Interface"/>
+				<TextBlock x:Name="UserEmailWatermarkText" 
+						   Style="{StaticResource WatermarkTextStyle}"
+						   Foreground="#FF0B0B0B" 
+						   Canvas.ZIndex="1" 
+						   VerticalAlignment="Center" Margin="20,23,125,22">
+					<Run Text="Type your email"/>
+				</TextBlock>
+			</Grid>
+			<TextBlock x:Name="PasswordLabel" Style="{StaticResource TextBlockLoginPageStyle}">Password</TextBlock>
+			<PasswordBox x:Name="PasswordTextBox"/>
+			<Button x:Name="Login" IsEnabled="{Binding ElementName=ThisUserLoginControl, Path=CanLogin}">Login with Yammer</Button>
+		</StackPanel>
+	</Grid>
+</UserControl>
