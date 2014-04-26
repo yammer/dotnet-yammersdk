@@ -145,7 +145,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -187,19 +189,16 @@
       <HintPath>$(SolutionDir)..\lib\packages\Caliburn.Micro.1.5.2\lib\wp8\Caliburn.Micro.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\lib\packages\Newtonsoft.Json.6.0.2\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(SolutionDir)..\lib\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\lib\packages\Microsoft.Net.Http.2.2.20\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    <Reference Include="System.Net.Http">
+      <HintPath>$(SolutionDir)..\lib\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\lib\packages\Microsoft.Net.Http.2.2.20\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>$(SolutionDir)..\lib\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\lib\packages\Microsoft.Net.Http.2.2.20\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>$(SolutionDir)..\lib\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)..\lib\packages\Caliburn.Micro.1.5.2\lib\wp8\System.Windows.Interactivity.dll</HintPath>
@@ -207,32 +206,24 @@
     <Reference Include="WPControls">
       <HintPath>$(SolutionDir)..\lib\packages\WPControls.1.5.2\lib\wp8\WPControls.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\API\Yammer.Oss.Api\Yammer.Oss.Api.csproj">
-      <Project>{2051AB46-60C5-46D0-AFDF-1A53401E5856}</Project>
-      <Name>Yammer.Oss.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PCLs\Yammer.Oss.Api.Dtos\Yammer.Oss.Api.Dtos.csproj">
-      <Project>{76B26981-D2B1-476C-BA28-20F6FE2790B5}</Project>
-      <Name>Yammer.Oss.Api.Dtos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PCLs\Yammer.Oss.Core\Yammer.Oss.Core.csproj">
-      <Project>{9BA8C126-0E93-49E6-B736-50BB1FEF2FEB}</Project>
-      <Name>Yammer.Oss.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PCLs\Yammer.Oss.Data\Yammer.Oss.Data.csproj">
-      <Project>{31B1DBF7-C39D-418D-91D5-E44BD6F16A9C}</Project>
-      <Name>Yammer.Oss.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PCLs\Yammer.Oss.Models\Yammer.Oss.Models.csproj">
-      <Project>{3CC9D3A1-19E8-4B06-8657-3DF77E1F01F7}</Project>
-      <Name>Yammer.Oss.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Yammer.Oss.Api.WP8\Yammer.Oss.Api.WP8.csproj">
-      <Project>{A58985E0-70D5-4832-A2B3-61E235AF8D86}</Project>
-      <Name>Yammer.Oss.Api.WP8</Name>
-    </ProjectReference>
+    <Reference Include="Yammer.Oss.Api">
+      <HintPath>$(SolutionDir)..\lib\packages\Yammer.Oss.Api.0.5.0.0\lib\portable-net45+netcore45+wp8+win8\Debug\Yammer.Oss.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Yammer.Oss.Api.Dtos">
+      <HintPath>$(SolutionDir)..\lib\packages\Yammer.Oss.Api.0.5.0.0\lib\portable-net45+netcore45+wp8+win8\Debug\Yammer.Oss.Api.Dtos.dll</HintPath>
+    </Reference>
+    <Reference Include="Yammer.Oss.Core">
+      <HintPath>$(SolutionDir)..\lib\packages\Yammer.Oss.Api.0.5.0.0\lib\portable-net45+netcore45+wp8+win8\Debug\Yammer.Oss.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Yammer.Oss.Data">
+      <HintPath>$(SolutionDir)..\lib\packages\Yammer.Oss.Api.0.5.0.0\lib\portable-net45+netcore45+wp8+win8\Debug\Yammer.Oss.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Yammer.Oss.Models">
+      <HintPath>$(SolutionDir)..\lib\packages\Yammer.Oss.Api.0.5.0.0\lib\portable-net45+netcore45+wp8+win8\Debug\Yammer.Oss.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Yammer.Oss.OAuth.WP8">
+      <HintPath>$(SolutionDir)..\lib\packages\Yammer.Oss.Api.0.5.0.0\lib\wp8\Release\Yammer.Oss.OAuth.WP8.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
@@ -249,9 +240,9 @@
   Note: This library is from a 3rd party company, the author has no control whatsoever on how it works or performance, nor any liabilities.
   For more information got to http://xamlspy.com or http://xamlspy.com/learn/vsintegration#manualimport -->
   <Import Project="$(XamlSpyInstallPath)MSBuild\FirstFloor.XamlSpy.WindowsPhone.targets" Condition="'$(XamlSpyInstallPath)' != '' and '$(Configuration)' == 'Debug'" />
-  <Import Project="..\..\..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Import Project="$(SolutionDir)..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('$(SolutionDir)..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-    <Error Condition="!Exists('..\..\..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
-    <Error Condition="Exists('..\..\..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+    <Error Condition="!Exists('$(SolutionDir)..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('$(SolutionDir)..\lib\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
   </Target>
 </Project>
