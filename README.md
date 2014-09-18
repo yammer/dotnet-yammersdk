@@ -17,5 +17,5 @@ Supported Platforms:
  - Windows Phone 8+
  - Portable Class Libraries
 
-Go to the  Documentation section to get started with the SDK.
+Go to the [Documentation section](https://yammersdk.codeplex.com/documentation) to get started with the SDK.
 
